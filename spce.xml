@@ -1,0 +1,34 @@
+<ForceField>
+  <Info>
+    <Reference Reference="H.J.C. Berendsen, J. R. Grigera, and T. P. Straatsma. The Missing Term in Effective Pair Potentials. J. Phys. Chem 91:6269-6271, 1987." forcefield="spc-e">H.J.C. Berendsen, J. R. Grigera, and T. P. Straatsma. The Missing Term in Effective Pair Potentials. J. Phys. Chem 91:6269-6271, 1987.</Reference>
+  </Info>
+  <AtomTypes>
+    <Type class="HT" element="H" mass="1.008" name="HT"/>
+    <Type class="OT" element="O" mass="15.9994" name="OT"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="SPCE">
+      <Atom charge="-0.8476" name="OH2" type="OT"/>
+      <Atom charge="0.4238" name="H1" type="HT"/>
+      <Atom charge="0.4238" name="H2" type="HT"/>
+      <Bond atomName1="OH2" atomName2="H1"/>
+      <Bond atomName1="OH2" atomName2="H2"/>
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="0.0" length="0.1633" type1="HT" type2="HT"/>
+    <Bond k="376559.99999999994" length="0.1" type1="HT" type2="OT"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="1.9106119321581925" k="460.24" type1="HT" type2="OT" type3="HT"/>
+  </HarmonicAngleForce>
+  <NonbondedForce coulomb14scale="1.0" lj14scale="1.0">
+    <UseAttributeFromResidue name="charge"/>
+    <Atom epsilon="0.0" sigma="1.0" type="HT"/>
+    <Atom epsilon="0.0" sigma="1.0" type="OT"/>
+  </NonbondedForce>
+  <LennardJonesForce lj14scale="1.0">
+    <Atom epsilon="0.0" sigma="1.0" type="HT"/>
+    <Atom epsilon="0.6499844" sigma="0.3166" type="OT"/>
+  </LennardJonesForce>
+</ForceField>

@@ -1,0 +1,39 @@
+<ForceField>
+  <AtomTypes>
+    <Type class="SOD" element="Na" mass="22.98977" name="SOD"/>
+    <Type class="CLA" element="Cl" mass="35.45" name="CLA"/>
+    <Type class="CES" element="Cs" mass="132.90545" name="CES"/>
+    <Type class="IOD" element="I" mass="126.9" name="IOD"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="SOD">
+      <Atom charge="1.0" name="SOD" type="SOD"/>
+    </Residue>
+    <Residue name="CLA">
+      <Atom charge="-1.0" name="CLA" type="CLA"/>
+    </Residue>
+    <Residue name="CES">
+      <Atom charge="1.0" name="CES" type="CES"/>
+    </Residue>
+    <Residue name="IOD">
+      <Atom charge="-1.0" name="IOD" type="IOD"/>
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+  </HarmonicAngleForce>
+  <NonbondedForce coulomb14scale="1.0" lj14scale="1.0">
+    <UseAttributeFromResidue name="charge"/>
+    <Atom epsilon="0.0" sigma="1.0" type="SOD"/>
+    <Atom epsilon="0.0" sigma="1.0" type="CLA"/>
+    <Atom epsilon="0.0" sigma="1.0" type="CES"/>
+    <Atom epsilon="0.0" sigma="1.0" type="IOD"/>
+  </NonbondedForce>
+  <LennardJonesForce lj14scale="1.0">
+    <Atom epsilon="1.4755" sigma="0.2160" type="SOD"/>
+    <Atom epsilon="0.0535" sigma="0.4830" type="CLA"/>
+    <Atom epsilon="0.3760" sigma="0.3601" type="CES"/>
+    <Atom epsilon="0.1790" sigma="0.5201" type="IOD"/>
+  </LennardJonesForce>
+</ForceField>
